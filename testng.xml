@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+  <test thread-count="5" name="HomePageTest">
+    <classes>
+	  <class name="com.example.spring.selenium.HomePageTest"/>
+	 </classes>
+  </test>	  
+  <test thread-count="5" name="HomePageTest2">
+    <classes>
+	  <class name="com.example.spring.selenium.HomePageTest2"/>
+	 </classes>
+  </test>	 
+  <test thread-count="5" name="HomePageTest3">
+    <classes>
+	  <class name="com.example.spring.selenium.HomePageTest3"/>
+	 </classes>
+  </test>	
+  <test thread-count="5" name="TopDealsTest">
+    <classes>
+	  <class name="com.example.spring.selenium.TopDealsTest"/>
+	 </classes>
+  </test> 
+</suite> <!-- Suite -->

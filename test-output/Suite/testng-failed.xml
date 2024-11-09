@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="HomePageTest2(failed)">
+    <classes>
+      <class name="com.example.spring.selenium.HomePageTest2">
+        <methods>
+          <include name="flushReports"/>
+          <include name="itemsTest"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.example.spring.selenium.HomePageTest2 -->
+    </classes>
+  </test> <!-- HomePageTest2(failed) -->
+  <test thread-count="5" parallel="tests" name="HomePageTest(failed)">
+    <classes>
+      <class name="com.example.spring.selenium.HomePageTest">
+        <methods>
+          <include name="flushReports"/>
+          <include name="checkoutCart"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="addItems"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.example.spring.selenium.HomePageTest -->
+    </classes>
+  </test> <!-- HomePageTest(failed) -->
+  <test thread-count="5" parallel="tests" name="HomePageTest3(failed)">
+    <classes>
+      <class name="com.example.spring.selenium.HomePageTest3">
+        <methods>
+          <include name="flushReports"/>
+          <include name="checkoutCart"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="completeOrder"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="addItems"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.example.spring.selenium.HomePageTest3 -->
+    </classes>
+  </test> <!-- HomePageTest3(failed) -->
+</suite> <!-- Failed suite [Suite] -->
