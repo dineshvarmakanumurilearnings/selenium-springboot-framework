@@ -21,8 +21,8 @@ import com.example.spring.selenium.utils.ScreenShotUtils;
 
 @SpringBootTest
 public class SpringBaseTestNGTest extends AbstractTestNGSpringContextTests{
-
-	@Lazy
+	
+	 @Lazy
 	@Autowired
 	protected ScreenShotUtils screenshotutils;
 	
@@ -36,9 +36,9 @@ public class SpringBaseTestNGTest extends AbstractTestNGSpringContextTests{
 	@Autowired
 	protected HomePage homepage;
 	
+	/*
 	@BeforeClass
 	public void setup(ITestContext context) {
-		//ExtentTest extentTest = applicationContext.getBean(ExtentTest.class);
 		extentTest.getModel().setName(context.getCurrentXmlTest().getName());
         homepage.launchApplication();
         Assert.assertTrue(homepage.isAt());
@@ -62,4 +62,5 @@ public class SpringBaseTestNGTest extends AbstractTestNGSpringContextTests{
     public void flushReports() {
         extentReportComponent.flush();
     }
+	 */
 }

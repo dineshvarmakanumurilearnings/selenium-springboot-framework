@@ -1,396 +1,365 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results retried="1" ignored="1" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-08T17:23:14 IST" name="Suite" finished-at="2024-11-08T17:24:14 IST" duration-ms="59524">
+  <suite started-at="2024-11-18T14:34:42 IST" name="Default suite" finished-at="2024-11-18T14:36:06 IST" duration-ms="84836">
     <groups>
+      <group name="cucumber">
+        <method signature="MyRunner.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.spring.runners.MyRunner@4bb33f74]" name="runScenario" class="com.example.spring.runners.MyRunner"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-11-08T17:23:14 IST" name="TopDealsTest" finished-at="2024-11-08T17:23:44 IST" duration-ms="29736">
-      <class name="com.example.spring.selenium.TopDealsTest">
-        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:com.example.spring.selenium.TopDealsTest@315f43d5]" started-at="2024-11-08T17:23:14 IST" name="springTestContextBeforeTestClass" finished-at="2024-11-08T17:23:14 IST" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.example.spring.selenium.TopDealsTest@315f43d5]" started-at="2024-11-08T17:23:14 IST" name="springTestContextPrepareTestInstance" finished-at="2024-11-08T17:23:15 IST" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="1278" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.example.spring.selenium.TopDealsTest@315f43d5]" started-at="2024-11-08T17:23:15 IST" name="setup" finished-at="2024-11-08T17:23:31 IST" duration-ms="15937" status="PASS">
+    <test started-at="2024-11-18T14:34:42 IST" name="Default test" finished-at="2024-11-18T14:36:06 IST" duration-ms="84836">
+      <class name="com.example.spring.runners.MyRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.spring.runners.MyRunner@4bb33f74]" started-at="2024-11-18T14:34:42 IST" name="setUpClass" finished-at="2024-11-18T14:34:42 IST" duration-ms="243" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7b02e036]]>
+                <![CDATA[org.testng.TestRunner@73809e7]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.TopDealsTest@315f43d5]" started-at="2024-11-08T17:23:31 IST" name="springTestContextBeforeTestMethod" finished-at="2024-11-08T17:23:32 IST" duration-ms="404" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method retried="true" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.spring.runners.MyRunner@4bb33f74]" started-at="2024-11-18T14:34:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-18T14:35:20 IST" duration-ms="38287" status="SKIP">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.example.spring.selenium.TopDealsTest.verifyPriceandDiscountedPrice()]]>
+                <![CDATA["Verify User is able to validate cupon code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Search Functionality on Home Page"]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: span.promoIfo' (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: span.promoIfo' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+at org.openqa.selenium.support.ui.WebDriverWait$$SpringCGLIB$$0.until(<generated>)
+at com.example.spring.selenium.pages.Base.getTextFromElement(Base.java:59)
+at com.example.spring.selenium.pages.CartPage.verifyCupon(CartPage.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:178)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:178)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+at com.example.spring.selenium.pages.CartPage$$SpringCGLIB$$1.verifyCupon(<generated>)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+at com.example.spring.selenium.pages.CartPage$$SpringCGLIB$$0.verifyCupon(<generated>)
+at com.example.spring.steps.CartPageSteps.apply_cupon_code(CartPageSteps.java:35)
+at ✽.Apply cupon code(classpath:Features/Serach.feature:11)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"span.promoIfo"}
+  (Session info: chrome=128.0.6613.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.6.1', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85604cddd36663933b17f81c5c3a4dd0, findElement {using=css selector, value=span.promoIfo}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: /var/folders/_8/48m98__j153...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62040}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:62040/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 85604cddd36663933b17f81c5c3a4dd0
+at jdk.internal.reflect.GeneratedConstructorAccessor39.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+at jdk.internal.reflect.GeneratedMethodAccessor24.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:216)
+at jdk.proxy2/jdk.proxy2.$Proxy143.findElement(Unknown Source)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy144.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+at org.openqa.selenium.support.ui.WebDriverWait$$SpringCGLIB$$0.until(<generated>)
+at com.example.spring.selenium.pages.Base.getTextFromElement(Base.java:59)
+at com.example.spring.selenium.pages.CartPage.verifyCupon(CartPage.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:178)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:178)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+at com.example.spring.selenium.pages.CartPage$$SpringCGLIB$$1.verifyCupon(<generated>)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+at com.example.spring.selenium.pages.CartPage$$SpringCGLIB$$0.verifyCupon(<generated>)
+at com.example.spring.steps.CartPageSteps.apply_cupon_code(CartPageSteps.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at com.example.spring.runners.MyRunner.runScenario(MyRunner.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="verifyPriceandDiscountedPrice()[pri:0, instance:com.example.spring.selenium.TopDealsTest@315f43d5]" started-at="2024-11-08T17:23:32 IST" name="verifyPriceandDiscountedPrice" finished-at="2024-11-08T17:23:44 IST" duration-ms="11929" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyPriceandDiscountedPrice -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.example.spring.selenium.TopDealsTest@315f43d5]" started-at="2024-11-08T17:23:44 IST" name="tearDown" finished-at="2024-11-08T17:23:44 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.spring.runners.MyRunner@4bb33f74]" started-at="2024-11-18T14:35:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-18T14:36:05 IST" duration-ms="45119" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyPriceandDiscountedPrice status=SUCCESS method=TopDealsTest.verifyPriceandDiscountedPrice()[pri:0, instance:com.example.spring.selenium.TopDealsTest@315f43d5] output={null}]]]>
+                <![CDATA["Verify User is able to validate cupon code"]]>
               </value>
             </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.TopDealsTest@315f43d5]" started-at="2024-11-08T17:23:44 IST" name="springTestContextAfterTestMethod" finished-at="2024-11-08T17:23:44 IST" duration-ms="6" status="PASS">
-          <params>
-            <param index="0">
+            <param index="1">
               <value>
-                <![CDATA[public void com.example.spring.selenium.TopDealsTest.verifyPriceandDiscountedPrice()]]>
+                <![CDATA["Search Functionality on Home Page"]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: span.promoIfo' (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: span.promoIfo' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+at org.openqa.selenium.support.ui.WebDriverWait$$SpringCGLIB$$0.until(<generated>)
+at com.example.spring.selenium.pages.Base.getTextFromElement(Base.java:59)
+at com.example.spring.selenium.pages.CartPage.verifyCupon(CartPage.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:178)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:178)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+at com.example.spring.selenium.pages.CartPage$$SpringCGLIB$$1.verifyCupon(<generated>)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+at com.example.spring.selenium.pages.CartPage$$SpringCGLIB$$0.verifyCupon(<generated>)
+at com.example.spring.steps.CartPageSteps.apply_cupon_code(CartPageSteps.java:35)
+at ✽.Apply cupon code(classpath:Features/Serach.feature:11)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"span.promoIfo"}
+  (Session info: chrome=128.0.6613.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.6.1', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00fddda243e559e72dd5876806d912dd, findElement {using=css selector, value=span.promoIfo}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: /var/folders/_8/48m98__j153...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62092}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:62092/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00fddda243e559e72dd5876806d912dd
+at jdk.internal.reflect.GeneratedConstructorAccessor39.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+at jdk.internal.reflect.GeneratedMethodAccessor24.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:216)
+at jdk.proxy2/jdk.proxy2.$Proxy143.findElement(Unknown Source)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy144.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+at org.openqa.selenium.support.ui.WebDriverWait$$SpringCGLIB$$0.until(<generated>)
+at com.example.spring.selenium.pages.Base.getTextFromElement(Base.java:59)
+at com.example.spring.selenium.pages.CartPage.verifyCupon(CartPage.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:178)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:178)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+at com.example.spring.selenium.pages.CartPage$$SpringCGLIB$$1.verifyCupon(<generated>)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+at com.example.spring.selenium.pages.CartPage$$SpringCGLIB$$0.verifyCupon(<generated>)
+at com.example.spring.steps.CartPageSteps.apply_cupon_code(CartPageSteps.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at com.example.spring.runners.MyRunner.runScenario(MyRunner.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:105)
+at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:com.example.spring.selenium.TopDealsTest@315f43d5]" started-at="2024-11-08T17:23:44 IST" name="springTestContextAfterTestClass" finished-at="2024-11-08T17:23:44 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.spring.runners.MyRunner@4bb33f74]" started-at="2024-11-18T14:36:05 IST" name="tearDownClass" finished-at="2024-11-18T14:36:06 IST" duration-ms="1165" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- springTestContextAfterTestClass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.spring.selenium.TopDealsTest@315f43d5]" started-at="2024-11-08T17:23:44 IST" name="tearDown" finished-at="2024-11-08T17:23:44 IST" duration-ms="150" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.example.spring.selenium.TopDealsTest@315f43d5]" started-at="2024-11-08T17:24:14 IST" name="flushReports" finished-at="2024-11-08T17:24:14 IST" duration-ms="142" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- flushReports -->
-      </class> <!-- com.example.spring.selenium.TopDealsTest -->
-    </test> <!-- TopDealsTest -->
-    <test started-at="2024-11-08T17:23:14 IST" name="HomePageTest2" finished-at="2024-11-08T17:24:03 IST" duration-ms="48812">
-      <class name="com.example.spring.selenium.HomePageTest2">
-        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:com.example.spring.selenium.HomePageTest2@235a0c16]" started-at="2024-11-08T17:23:14 IST" name="springTestContextBeforeTestClass" finished-at="2024-11-08T17:23:14 IST" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.example.spring.selenium.HomePageTest2@235a0c16]" started-at="2024-11-08T17:23:14 IST" name="springTestContextPrepareTestInstance" finished-at="2024-11-08T17:23:15 IST" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="1264" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.example.spring.selenium.HomePageTest2@235a0c16]" started-at="2024-11-08T17:23:15 IST" name="setup" finished-at="2024-11-08T17:23:33 IST" duration-ms="17360" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@315df4bb]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.HomePageTest2@235a0c16]" started-at="2024-11-08T17:23:33 IST" name="springTestContextBeforeTestMethod" finished-at="2024-11-08T17:23:33 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.example.spring.selenium.HomePageTest2.itemsTest() throws java.lang.NoSuchMethodException,java.lang.SecurityException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="itemsTest()[pri:0, instance:com.example.spring.selenium.HomePageTest2@235a0c16]" started-at="2024-11-08T17:23:33 IST" name="itemsTest" finished-at="2024-11-08T17:24:03 IST" duration-ms="30067" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- itemsTest -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.HomePageTest2@235a0c16]" started-at="2024-11-08T17:24:03 IST" name="springTestContextAfterTestMethod" finished-at="2024-11-08T17:24:03 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.example.spring.selenium.HomePageTest2.itemsTest() throws java.lang.NoSuchMethodException,java.lang.SecurityException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.example.spring.selenium.HomePageTest2@235a0c16]" started-at="2024-11-08T17:24:03 IST" name="tearDown" finished-at="2024-11-08T17:24:03 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=itemsTest status=SUCCESS method=HomePageTest2.itemsTest()[pri:0, instance:com.example.spring.selenium.HomePageTest2@235a0c16] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:com.example.spring.selenium.HomePageTest2@235a0c16]" started-at="2024-11-08T17:24:03 IST" name="springTestContextAfterTestClass" finished-at="2024-11-08T17:24:03 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestClass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.spring.selenium.HomePageTest2@235a0c16]" started-at="2024-11-08T17:24:03 IST" name="tearDown" finished-at="2024-11-08T17:24:03 IST" duration-ms="99" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.example.spring.selenium.HomePageTest2 -->
-    </test> <!-- HomePageTest2 -->
-    <test started-at="2024-11-08T17:23:14 IST" name="HomePageTest3" finished-at="2024-11-08T17:24:13 IST" duration-ms="59149">
-      <class name="com.example.spring.selenium.HomePageTest3">
-        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:23:14 IST" name="springTestContextBeforeTestClass" finished-at="2024-11-08T17:23:14 IST" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:23:14 IST" name="springTestContextPrepareTestInstance" finished-at="2024-11-08T17:23:15 IST" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="1268" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:23:15 IST" name="setup" finished-at="2024-11-08T17:23:33 IST" duration-ms="17556" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@5cad8b7d]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:23:33 IST" name="springTestContextBeforeTestMethod" finished-at="2024-11-08T17:23:33 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.example.spring.selenium.HomePageTest3.addItems()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="addItems()[pri:1, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:23:33 IST" name="addItems" finished-at="2024-11-08T17:24:03 IST" duration-ms="30536" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addItems -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:24:03 IST" name="tearDown" finished-at="2024-11-08T17:24:03 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=addItems status=SUCCESS method=HomePageTest3.addItems()[pri:1, instance:com.example.spring.selenium.HomePageTest3@6b7906b3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:24:03 IST" name="springTestContextAfterTestMethod" finished-at="2024-11-08T17:24:03 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.example.spring.selenium.HomePageTest3.addItems()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method signature="checkoutCart()[pri:2, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:24:03 IST" name="checkoutCart" finished-at="2024-11-08T17:24:11 IST" duration-ms="7218" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkoutCart -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:24:03 IST" name="springTestContextBeforeTestMethod" finished-at="2024-11-08T17:24:03 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.example.spring.selenium.HomePageTest3.checkoutCart()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:24:11 IST" name="tearDown" finished-at="2024-11-08T17:24:11 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkoutCart status=SUCCESS method=HomePageTest3.checkoutCart()[pri:2, instance:com.example.spring.selenium.HomePageTest3@6b7906b3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:24:11 IST" name="springTestContextAfterTestMethod" finished-at="2024-11-08T17:24:11 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.example.spring.selenium.HomePageTest3.checkoutCart()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method signature="completeOrder()[pri:3, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:24:11 IST" name="completeOrder" finished-at="2024-11-08T17:24:12 IST" duration-ms="1503" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- completeOrder -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:24:11 IST" name="springTestContextBeforeTestMethod" finished-at="2024-11-08T17:24:11 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.example.spring.selenium.HomePageTest3.completeOrder()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:24:12 IST" name="tearDown" finished-at="2024-11-08T17:24:12 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=completeOrder status=SUCCESS method=HomePageTest3.completeOrder()[pri:3, instance:com.example.spring.selenium.HomePageTest3@6b7906b3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:24:12 IST" name="springTestContextAfterTestMethod" finished-at="2024-11-08T17:24:12 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.example.spring.selenium.HomePageTest3.completeOrder()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:24:12 IST" name="springTestContextAfterTestClass" finished-at="2024-11-08T17:24:12 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestClass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.spring.selenium.HomePageTest3@6b7906b3]" started-at="2024-11-08T17:24:12 IST" name="tearDown" finished-at="2024-11-08T17:24:13 IST" duration-ms="1043" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.example.spring.selenium.HomePageTest3 -->
-    </test> <!-- HomePageTest3 -->
-    <test started-at="2024-11-08T17:23:14 IST" name="HomePageTest" finished-at="2024-11-08T17:24:14 IST" duration-ms="59524">
-      <class name="com.example.spring.selenium.HomePageTest">
-        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:com.example.spring.selenium.HomePageTest@5cbe877d]" started-at="2024-11-08T17:23:14 IST" name="springTestContextBeforeTestClass" finished-at="2024-11-08T17:23:14 IST" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.example.spring.selenium.HomePageTest@5cbe877d]" started-at="2024-11-08T17:23:14 IST" name="springTestContextPrepareTestInstance" finished-at="2024-11-08T17:23:15 IST" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="1267" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.example.spring.selenium.HomePageTest@5cbe877d]" started-at="2024-11-08T17:23:15 IST" name="setup" finished-at="2024-11-08T17:23:32 IST" duration-ms="16110" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@3fc08eec]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.HomePageTest@5cbe877d]" started-at="2024-11-08T17:23:32 IST" name="springTestContextBeforeTestMethod" finished-at="2024-11-08T17:23:32 IST" duration-ms="246" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.example.spring.selenium.HomePageTest.addItems()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="addItems()[pri:1, instance:com.example.spring.selenium.HomePageTest@5cbe877d]" started-at="2024-11-08T17:23:32 IST" name="addItems" finished-at="2024-11-08T17:24:04 IST" duration-ms="32510" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addItems -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.example.spring.selenium.HomePageTest@5cbe877d]" started-at="2024-11-08T17:24:04 IST" name="tearDown" finished-at="2024-11-08T17:24:04 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=addItems status=SUCCESS method=HomePageTest.addItems()[pri:1, instance:com.example.spring.selenium.HomePageTest@5cbe877d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.HomePageTest@5cbe877d]" started-at="2024-11-08T17:24:04 IST" name="springTestContextAfterTestMethod" finished-at="2024-11-08T17:24:04 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.example.spring.selenium.HomePageTest.addItems()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.HomePageTest@5cbe877d]" started-at="2024-11-08T17:24:04 IST" name="springTestContextBeforeTestMethod" finished-at="2024-11-08T17:24:04 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.example.spring.selenium.HomePageTest.checkoutCart()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="checkoutCart()[pri:2, instance:com.example.spring.selenium.HomePageTest@5cbe877d]" started-at="2024-11-08T17:24:04 IST" name="checkoutCart" finished-at="2024-11-08T17:24:12 IST" duration-ms="7244" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkoutCart -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.example.spring.selenium.HomePageTest@5cbe877d]" started-at="2024-11-08T17:24:12 IST" name="tearDown" finished-at="2024-11-08T17:24:12 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkoutCart status=SUCCESS method=HomePageTest.checkoutCart()[pri:2, instance:com.example.spring.selenium.HomePageTest@5cbe877d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:com.example.spring.selenium.HomePageTest@5cbe877d]" started-at="2024-11-08T17:24:12 IST" name="springTestContextAfterTestClass" finished-at="2024-11-08T17:24:12 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestClass -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.example.spring.selenium.HomePageTest@5cbe877d]" started-at="2024-11-08T17:24:12 IST" name="springTestContextAfterTestMethod" finished-at="2024-11-08T17:24:12 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.example.spring.selenium.HomePageTest.checkoutCart()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.spring.selenium.HomePageTest@5cbe877d]" started-at="2024-11-08T17:24:12 IST" name="tearDown" finished-at="2024-11-08T17:24:14 IST" duration-ms="2125" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.example.spring.selenium.HomePageTest -->
-    </test> <!-- HomePageTest -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.example.spring.runners.MyRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

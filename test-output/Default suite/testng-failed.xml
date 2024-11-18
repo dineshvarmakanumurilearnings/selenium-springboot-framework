@@ -3,21 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.example.spring.selenium.HomePageTest">
+      <class name="com.example.spring.runners.MyRunner">
         <methods>
-          <include name="flushReports"/>
-          <include name="checkoutCart"/>
-          <include name="springTestContextBeforeTestClass"/>
-          <include name="springTestContextBeforeTestMethod"/>
-          <include name="addItems"/>
-          <include name="springTestContextAfterTestClass"/>
-          <include name="springTestContextPrepareTestInstance"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="springTestContextAfterTestMethod"/>
-          <include name="setup"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.example.spring.selenium.HomePageTest -->
+      </class> <!-- com.example.spring.runners.MyRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -37,7 +37,10 @@ public abstract class Base {
 	} 
 	
 	public void close() {
-		driver.quit();
+		
+			driver.quit();
+		
+		
 	} 
 	
 	protected void clicWithWait(WebElement element) {

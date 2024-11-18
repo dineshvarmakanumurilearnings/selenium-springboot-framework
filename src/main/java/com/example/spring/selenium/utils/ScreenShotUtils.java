@@ -29,5 +29,9 @@ public class ScreenShotUtils {
 		FileCopyUtils.copy(source, path.resolve(imageName).toFile());
 		return path.toString();
 	}
+	
+	public byte[] getScreenShot() {
+		return this.ctx.getBean(TakesScreenshot.class).getScreenshotAs(OutputType.BYTES);
+	}
 
 }
